@@ -11,12 +11,16 @@
   "make",
   "year",
   "color",
+  "insurance_expiry",
   "column_break_yaps",
+  "audit_completed",
   "model",
   "license_plate",
   "is_published",
   "route",
-  "vehicle_image"
+  "vehicle_image",
+  "status",
+  "condition"
  ],
  "fields": [
   {
@@ -78,6 +82,30 @@
    "fieldname": "vehicle_image",
    "fieldtype": "Attach Image",
    "label": "Vehicle Image"
+  },
+  {
+   "fieldname": "insurance_expiry",
+   "fieldtype": "Date",
+   "label": "Insurance Expiry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nOut of Service\nSold\nCrushed"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Rating",
+   "label": "Condition"
+  },
+  {
+   "default": "0",
+   "fieldname": "audit_completed",
+   "fieldtype": "Check",
+   "label": "Audit Completed?",
+   "permlevel": 1
   }
  ],
  "grid_page_length": 50,
@@ -85,7 +113,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2025-07-23 19:56:00.692504",
+ "modified": "2025-08-13 13:21:59.670700",
  "modified_by": "Administrator",
  "module": "Rentals",
  "name": "Vehicle",
@@ -103,6 +131,34 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Vehicle Manager",
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Vehicle Auditor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Vehicle Auditor",
+   "share": 1
   }
  ],
  "route": "cars",
