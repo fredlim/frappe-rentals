@@ -14,6 +14,7 @@
   "insurance_expiry",
   "column_break_yaps",
   "audit_completed",
+  "type",
   "model",
   "license_plate",
   "is_published",
@@ -106,6 +107,12 @@
    "fieldtype": "Check",
    "label": "Audit Completed?",
    "permlevel": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Vehicle Type"
   }
  ],
  "grid_page_length": 50,
@@ -113,7 +120,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2025-08-13 13:21:59.670700",
+ "modified": "2025-08-17 18:28:44.410765",
  "modified_by": "Administrator",
  "module": "Rentals",
  "name": "Vehicle",
